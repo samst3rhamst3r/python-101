@@ -8,3 +8,19 @@
 # for example flags and conditional statements.
 
 filename = "operators.pdf"
+
+valid = False
+valid_prev_char = None
+for char in filename:
+    if (char == ".") or (valid_prev_char == "." and char == "p") or (valid_prev_char == "p" and char == "d"):
+        valid_prev_char = char
+    elif (valid_prev_char == "d" and char == "f"):
+        valid_prev_char = char
+        valid = True
+    else:
+        valid = False
+
+if valid:
+    print("This is a valid file!")
+else:
+    print("This is not a PDF file...")

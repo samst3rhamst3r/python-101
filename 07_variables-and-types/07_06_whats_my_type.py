@@ -5,3 +5,8 @@ mystery = None
 mystery = "Sommerfeld"
 mystery = 137
 mystery = mystery + 0.0
+print(type(mystery))
+
+# type of mystery is class float at the end
+# the types from top to bottom are:
+# NoneType, str, int, float

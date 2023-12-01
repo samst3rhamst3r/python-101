@@ -22,3 +22,12 @@
 # * * *
 #
 # HINT: Think of nested for loops!
+
+import random
+
+stars = random.randint(1, 10)
+
+for row in range(stars):
+    for col in range(row):
+        print("*", end=" ")
+    print()
